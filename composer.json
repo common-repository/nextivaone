@@ -1,0 +1,118 @@
+{
+  "name": "nextiva/nextiva-one",
+  "description": "NextivaOne WordPress Plugin",
+  "type": "wordpress-plugin",
+  "homepage": "https://github.com/nextiva/nextiva-one",
+  "keywords": [
+    "nextiva",
+    "nextiva-one"
+  ],
+  "authors": [
+    {
+      "name": "Nextiva",
+      "email": "admin@nextiva.com",
+      "role": "Developer"
+    }
+  ],
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://wpackagist.org"
+    }
+  ],
+  "require": {
+    "php": "^7.4||^8.0",
+    "ext-json": "*",
+    "ext-readline": "*",
+    "johnbillion/extended-cpts": "^4.0||^5.0",
+    "moderntribe/square1-container": "^4.2",
+    "spatie/data-transfer-object": "^2.8"
+  },
+  "require-dev": {
+    "codeception/module-asserts": "^1.3",
+    "codeception/module-cli": "^1.1",
+    "codeception/module-db": "^1.1",
+    "codeception/module-filesystem": "^1.0",
+    "codeception/module-phpbrowser": "^1.0",
+    "codeception/module-webdriver": "^1.4",
+    "codeception/util-universalframework": "^1.0",
+    "composer/installers": "^2.0",
+    "johnpbloch/wordpress-core": "5.9.3",
+    "johnpbloch/wordpress-core-installer": "2.0.*",
+    "larapack/dd": "^1.1",
+    "lucatume/function-mocker": "^1.3",
+    "lucatume/wp-browser": "^3.0",
+    "moderntribe/coding-standards": "^2.0",
+    "phpstan/phpdoc-parser": "1.5.1",
+    "wpackagist-plugin/advanced-custom-fields": "^5.12",
+    "wpackagist-plugin/all-in-one-seo-pack": "^4.2.3",
+    "wpackagist-plugin/contact-form-7": "^5.6",
+    "wpackagist-plugin/cookie-law-info": "^2.1",
+    "wpackagist-plugin/elementor": "^3.7",
+    "wpackagist-plugin/jetpack": "^11.2",
+    "wpackagist-plugin/litespeed-cache": "^5.1",
+    "wpackagist-plugin/redirection": "^5.3",
+    "wpackagist-plugin/regenerate-thumbnails": "^3.1",
+    "wpackagist-plugin/siteorigin-panels": "^2.16",
+    "wpackagist-plugin/user-role-editor": "^4.63",
+    "wpackagist-plugin/wordfence": "^7.6",
+    "wpackagist-plugin/wordpress-seo": "^19.5",
+    "wpackagist-plugin/wp-smushit": "^3.10",
+    "wpackagist-plugin/wp-super-cache": "^1.7",
+    "wpackagist-plugin/wpforms-lite": "^1.7.5",
+    "wpackagist-theme/astra": "^3.9",
+    "wpackagist-theme/generatepress": "^3.1",
+    "wpackagist-theme/hello-elementor": "^2.6",
+    "wpackagist-theme/kadence": "^1.1",
+    "wpackagist-theme/neve": "^3.3",
+    "wpackagist-theme/oceanwp": "^3.3",
+    "wpackagist-theme/storefront": "^4.1",
+    "wpackagist-theme/twentynineteen": "^2.3",
+    "wpackagist-theme/twentytwenty": "^2.0",
+    "wpackagist-theme/twentytwentyone": "^1.6",
+    "wpackagist-theme/twentytwentytwo": "^1.2"
+  },
+  "autoload": {
+    "psr-4": {
+      "Tribe\\NextivaOne\\": "src"
+    },
+    "files": [
+      "vendor/php-di/php-di/src/functions.php"
+    ]
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Tribe\\Tests\\": "dev/tests/tests/_support/Classes/"
+    }
+  },
+  "scripts": {
+    "lint": "vendor/bin/phpcs --standard=phpcs.xml.dist",
+    "format": "vendor/bin/phpcbf --standard=phpcs.xml.dist"
+  },
+  "config": {
+    "sort-packages": true,
+    "platform": {
+      "php": "7.4.7"
+    },
+    "allow-plugins": {
+      "ffraenz/private-composer-installer": true,
+      "composer/installers": true,
+      "johnpbloch/wordpress-core-installer": true,
+      "cweagans/composer-patches": true,
+      "dealerdirect/phpcodesniffer-composer-installer": true
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "extra": {
+    "wordpress-install-dir": "public/wp",
+    "installer-paths": {
+      "public/wp-content/plugins/{$name}": [
+        "type:wordpress-plugin"
+      ],
+      "public/wp-content/themes/{$name}": [
+        "type:wordpress-theme"
+      ]
+    }
+  }
+}

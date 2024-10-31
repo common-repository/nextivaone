@@ -1,0 +1,5 @@
+{
+    "_instructions": "Rename file to local-config.json. Set `proxy` below to your local dev url for local browsersync and `certs_path` to your docker global certs directory.",
+    "proxy": "nextiva-one.tribe",
+    "certs_path": ""
+  }
